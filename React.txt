@@ -13,9 +13,9 @@ cd nomeDoProjeto
 npm start
 
 
-p1: abra o projeto no navegador
+p1:	abra o projeto no navegador
 
-p2: exclua a pasta scr e cria o arquivo index.js
+p2: 	exclua a pasta scr e cria o arquivo index.js
 
 resumo: criar um projeto react e realizar configurações
 
@@ -23,7 +23,7 @@ resumo: criar um projeto react e realizar configurações
 AULA 02 - Olá React
 ###################
 
-p1: entenda o conteúdo das pastas
+p1: 	entenda o conteúdo das pastas
 
 src:
 	- todos os códigos js
@@ -32,25 +32,21 @@ src:
 public:
 	- unico arquivo index.html
 
-p2: 
-importar o react-dom no index.js para conseguir os componentes no browser.
-
-import ReactDOM from 'react-dom'
-
-const element = document.getElementById('root')
-
-ReactDOM.render('Olá React', element) //irá renderizar o conteudo na página
+p2:	importar o react-dom no index.js para conseguir mostrar os componentes no browser.
+	import ReactDOM from 'react-dom'
+	const element = document.getElementById('root')
+	ReactDOM.render('Olá React', element) //irá renderizar o conteudo na página
 
 
-importar o rect no index.js para conseguir usar códigos jsx dentro do js.
+p3:	importar o rect no index.js para conseguir usar códigos jsx dentro do js.
+	import React from 'react'
+	ReactDOM.render(<h1>Olá React</h1>, element)
 
-import React from 'react'
+resumo: selecionamos o elemento do index.html e jogamos uma string comum, vimos que ao utilizar um jsx é necessário realizar a importação do componente react do próprio React.
 
-ReactDOM.render(<h1>Olá React</h1>, element)
-
-
-
+######################
 AULA 03 - O que é JSX?
+######################
 
 Qual a vantagem?
 De uma forma simples consigo definir todo meu conteudo em javascript
