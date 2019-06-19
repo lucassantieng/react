@@ -82,10 +82,7 @@ resumo: entendemos que um componente irá chamar outros componentes e que cada um
 AULA 05 - Primeiro componente
 #############################
 
-
-p1:	entro da pasta scr cria uma outra pasta chamada components e dentro irá criar uma arquivo chamado PrimeiroProjeto.jsx
-
-sempre que ouver código jsx dentro de um arquivo esse arquivo será um componente, logo a extensão será .jsx
+p1:	criar src/componets/PrimeiroComponente.jsx
 
 Quais os tipos de componentes? Existem dois tipos, um baseado em função e outro baseando em classe
 
@@ -130,8 +127,8 @@ export default () => <div><h1>Primeiro Componente com Arrow</h1></div>
 Resumo da aula:
 	Utilizar Arrow Function
 
-
-
+resumo:	entender que sempre que houver códigos jsx dentro de um arquivo a extensão deverá ser .jsx
+	entender a diferença entre os dois tipos de componentes
 
 AULA 07 - USANDO PROPS
 

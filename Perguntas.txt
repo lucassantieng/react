@@ -10,3 +10,6 @@ sem ele não é possível jogar nenhum componente na página
 
 
 
+
+
+Quais os tipos de componentes? Existem dois tipos, um baseado em função e outro baseando em classe
