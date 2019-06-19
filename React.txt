@@ -50,36 +50,40 @@ AULA 03 - O que é JSX?
 
 Qual a vantagem?
 De uma forma simples consigo definir todo meu conteudo em javascript
+Redução de códigos e funções de js
+Manipulação do DOM com JSX em vez de JS
 
-resumindo: iremos converter um html em javascript e armazenar em uma variável
+p1:	const element = document.getElementById('root')
 
-const element = document.getElementById('root')
+	const jsx = 
+		<ul>
+			<li>1) Lucas</li>
+			<li>2) Milena</li>
+			<li>3) Santi</li>
+	    	</ul>
 
-const jsx = <ul>
-		<li>1) Lucas</li>
-		<li>2) Milena</li>
-		<li>3) Santi</li>
-	    </ul>
+	ReactDOM.render(jsx, element)
 
-ReactDOM.render(jsx, element)
+resumo: entendemos o que é jsx e suas vantagens, iremos converter um html em javascript e armazenar em uma variável
 
-
-
+#####################
 AULA 04 - Componentes
+#####################
 
+O que é Componente?
+é uma tag personalizada.
 
+antigamente, uma aplicação possuia arquivos separados de html, css e js (mesmo porque são três coisas diferentes)
+hoje em dia, vamos criar um componente e dentro dele vamos unir as tecnologias html, css e js.
 
-antigamente era seprado uma aplicação em arquivos separados de html, css e js. Mesmo porque são três coisas diferentes.
+resumo: entendemos que um componente irá chamar outros componentes e que cada um possui um escopo próprio(html, css e js).
 
-hoje em dia, vamos criar um componente e dentro dele vamos ter html, css e js.
-
- 
-
+#############################
 AULA 05 - Primeiro componente
+#############################
 
 
-
-Dentro da pasta scr cria uma outra pasta chamada components e dentro irá criar uma arquivo chamado PrimeiroProjeto.jsx
+p1:	entro da pasta scr cria uma outra pasta chamada components e dentro irá criar uma arquivo chamado PrimeiroProjeto.jsx
 
 sempre que ouver código jsx dentro de um arquivo esse arquivo será um componente, logo a extensão será .jsx
 
