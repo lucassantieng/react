@@ -1,0 +1,219 @@
+##################################
+AULA 01 - Configuração do Ambiente
+##################################
+
+//instalando pacote:
+npm i -g create-react-app 
+
+//criando a aplicação
+create-react-app nomeDoProjeto 
+
+//startando projeto
+cd nomeDoProjeto
+npm start
+
+
+p1: abra o projeto no navegador
+
+p2: exclua a pasta scr e cria o arquivo index.js
+
+resumo: criar um projeto react e realizar configurações
+
+###################
+AULA 02 - Olá React
+###################
+
+p1: entenda o conteúdo das pastas
+
+src:
+	- todos os códigos js
+	- todos os componentes react
+
+public:
+	- unico arquivo index.html
+
+p2: 
+importar o react-dom no index.js para conseguir os componentes no browser.
+
+import ReactDOM from 'react-dom'
+
+const element = document.getElementById('root')
+
+ReactDOM.render('Olá React', element) //irá renderizar o conteudo na página
+
+
+importar o rect no index.js para conseguir usar códigos jsx dentro do js.
+
+import React from 'react'
+
+ReactDOM.render(<h1>Olá React</h1>, element)
+
+
+
+AULA 03 - O que é JSX?
+
+Qual a vantagem?
+De uma forma simples consigo definir todo meu conteudo em javascript
+
+resumindo: iremos converter um html em javascript e armazenar em uma variável
+
+const element = document.getElementById('root')
+
+const jsx = <ul>
+		<li>1) Lucas</li>
+		<li>2) Milena</li>
+		<li>3) Santi</li>
+	    </ul>
+
+ReactDOM.render(jsx, element)
+
+
+
+AULA 04 - Componentes
+
+
+
+antigamente era seprado uma aplicação em arquivos separados de html, css e js. Mesmo porque são três coisas diferentes.
+
+hoje em dia, vamos criar um componente e dentro dele vamos ter html, css e js.
+
+ 
+
+AULA 05 - Primeiro componente
+
+
+
+Dentro da pasta scr cria uma outra pasta chamada components e dentro irá criar uma arquivo chamado PrimeiroProjeto.jsx
+
+sempre que ouver código jsx dentro de um arquivo esse arquivo será um componente, logo a extensão será .jsx
+
+Quais os tipos de componentes? Existem dois tipos, um baseado em função e outro baseando em classe
+
+
+import React from 'react'
+
+
+function primeiro(){  //nessa função irá retornar um código jsx
+
+	return <h1>Primeiro Componente</h1>
+
+}
+
+export default primeiro //deverá ser exportado para outro arquivo conseguir detectar esse arquivo.
+
+
+
+otimizando o PrimeiroComponente:
+
+export default function(){
+	return <h1>Primeiro Componente</h1>	//retorna jsx
+}
+
+Resumo da aula:
+	Criar o primeiro componente baseado em função
+	Criar uma função retornando código jsx
+	Exportar arquivo para conseguir ser detectado por outros
+	Utilizar componente como tag html dentro de uma div no render
+
+
+
+AULA 06 - Primeiro Componente com Arrow Function
+
+
+react é um framework com foco na view
+
+otimizando mais ainda a função do Primeiro Componente
+
+export default () => { return <h1>Primeiro Componente! </h1>}  ou
+export default () => <div><h1>Primeiro Componente com Arrow</h1></div>
+
+Resumo da aula:
+	Utilizar Arrow Function
+
+
+
+
+AULA 07 - USANDO PROPS
+
+
+Quando estamos trabalhando com elementos html, como no caso da div no index.html, essa div possui propriedades 'id = 'root', essas propriedades servem para personalizar ou passar informações ao elemento para que seja renderizando de maneira correta
+
+Também é possível ter propriedades dentro de componentes personalizados. Essas propriedades são recebidas dentro de uma função como paramentros, ou seja, parametro props. Então irei trabalhar como meu componente será personalizado de acordo com os paramentros
+
+props será as propriedades que meu componente irá receber e a partir desse props irei conseguir pegar todos os parametros que foram passados.
+
+ou seja, eu irei passar um atributo/propriedade valor como parametro para meu componente referenciando-o com js.
+para fazer essa referenciação e interpretar como js será necessário utilizar chaves {}
+
+export default (props) => 
+	<div>
+		<h1>{props.valor}</h1>
+		<h2>{props.aBcD}</h2>
+		<h3></h3>
+	</div>
+
+
+index.js:
+
+ReactDOM.render(
+	<div>
+		<PrimeiroComponente valor = "Bom dia" aBcD = {Math.pow(2, 8)} />
+	</div>
+)
+
+Resumo :
+	Como passar propriedades para meus componentes por função recebendo props como parametros
+	Trechos entre chaves {} interpretados como js e não como jsx
+
+Resumo do resumo: Meu componente será trabalhado de acordo com os valores que serão passados pelo props(valores de propriedades dos elementos)
+
+
+##############################################
+AULA 08 - Um arquivo com Múltiplos Componentes
+##############################################
+
+
+A partir de um único arquivo jsx eu posso retornar multiplos componentes //não é padrão, o correto é um arquivo para um componente
+
+Vamos lá
+
+Vamos criar um arquivo DoisCompoentes.jsx e importar react 
+
+import React from 'react'
+
+const CompA = props =>
+	<h1>Primeiro Diz:</h1>
+
+const CompB = props =>
+	<h1>Segundo Diz:</h1>
+
+
+export { CompA, CompB } // exportando os dois componentes
+
+index.js:
+
+import {CompA, CompB} from './components/DoisComponentes'
+
+ReactDOM.render(
+	<div>
+		<CompA valor = "Ola, eu sou A!"/>
+		<CompB valor = "Ola, eu sou B!"/>
+	</div>
+, element)
+
+
+Resumo:
+	Criar dois componentes em um único arquivo
+	Exportar os dois componentes de uma vez
+
+
+
+
+
+
+
+
+
+
+
+

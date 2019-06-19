@@ -1,0 +1,12 @@
+qual pasta contém as dependências?
+package.json
+
+
+qual dependencia realiza o contato do react com a dom?
+react-dom
+
+qual importancia do react-dom?
+sem ele não é possível jogar nenhum componente na página
+
+
+
